@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://nsplnpbjy.github.io/zh-cn/sitemap.xml</loc>
-    
-      <lastmod>2024-10-20T00:51:22+08:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://nsplnpbjy.github.io/en/sitemap.xml</loc>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-10-20T22:11:02+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/techpage/mytest/</loc>
+    <lastmod>2024-10-20T22:11:02+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/techpage/</loc>
+    <lastmod>2024-10-20T22:11:02+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/thinking/</loc>
+    <lastmod>2024-10-20T15:16:22+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/thinking/%E5%85%89%E8%8D%A3%E4%B9%8B%E5%AE%B6/</loc>
+    <lastmod>2024-10-20T15:16:22+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/thinking/%E5%86%9C%E4%B8%9A%E5%90%88%E4%BD%9C%E5%8C%96%E7%9A%84%E4%B8%80%E5%9C%BA%E8%BE%A9%E8%AE%BA%E5%92%8C%E5%BD%93%E5%89%8D%E7%9A%84%E9%98%B6%E7%BA%A7%E6%96%97%E4%BA%89/</loc>
+    <lastmod>2024-10-20T00:51:22+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/thinking/%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E4%B8%8E%E8%B5%84%E4%BA%A7%E9%98%B6%E7%BA%A7%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%98%AF%E5%9B%BD%E5%86%85%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9F%9B%E7%9B%BE/</loc>
+    <lastmod>2024-10-20T00:48:28+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/techpage/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2024-10-20T00:40:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/contact/</loc>
+    <lastmod>2024-10-19T13:37:19+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/contact/email/</loc>
+    <lastmod>2024-10-19T13:37:19+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url>
+</urlset>

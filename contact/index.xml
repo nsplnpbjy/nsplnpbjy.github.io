@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Contacts on ComradeGenrr&#39;s Blog</title>
-        <link>http://localhost:1313/contact/</link>
+        <link>https://nsplnpbjy.github.io/contact/</link>
         <description>Recent content in Contacts on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Sat, 19 Oct 2024 13:37:19 +0800</lastBuildDate><atom:link href="http://localhost:1313/contact/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 19 Oct 2024 13:37:19 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/contact/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>email</title>
-        <link>http://localhost:1313/contact/email/</link>
+        <link>https://nsplnpbjy.github.io/contact/email/</link>
         <pubDate>Sat, 19 Oct 2024 13:37:19 +0800</pubDate>
         
-        <guid>http://localhost:1313/contact/email/</guid>
+        <guid>https://nsplnpbjy.github.io/contact/email/</guid>
         <description>&lt;p&gt;email: &lt;a class=&#34;link&#34; href=&#34;mailto:nsplnp@hotmail.com&#34; &gt;nsplnp@hotmail.com&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>

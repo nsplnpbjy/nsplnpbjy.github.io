@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>TechPages on ComradeGenrr&#39;s Blog</title>
-        <link>https://nsplnpbjy.github.io/techpage/</link>
-        <description>Recent content in TechPages on ComradeGenrr&#39;s Blog</description>
+        <title>技术 on ComradeGenrr&#39;s Blog</title>
+        <link>https://nsplnpbjy.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+        <description>Recent content in 技术 on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Sun, 20 Oct 2024 00:40:48 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/techpage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Oct 2024 00:40:48 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>静态网站部署</title>
         <link>https://nsplnpbjy.github.io/techpage/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</link>
         <pubDate>Sun, 20 Oct 2024 00:40:48 +0800</pubDate>

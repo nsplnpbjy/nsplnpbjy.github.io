@@ -301,6 +301,8 @@
       </ol>
     </li>
     <li><a href="#在你的前端中调用app或者bpp里面的代码">在你的前端中调用APP或者BPP里面的代码</a></li>
+    <li><a href="#运行你的项目">运行你的项目</a></li>
+    <li><a href="#构建你的项目">构建你的项目</a></li>
   </ol>
 </nav>
         </div>
@@ -555,6 +557,10 @@ NPM (Node 15+)</p>
 <p>使用<code>import { funcApp1, funcApp2 } from &quot;../wailsjs/go/main/App&quot;</code>来引入你的js代码中，其中 <strong>../wailsjs/go/main/App</strong> 这个路径是wails自动生成的，你不要去手动改变它。</p>
 <p>同理，使用<code>import { funcBpp1,funcBpp2 } from &quot;../wailsjs/go/main/Bpp&quot;</code>来将你的Bpp结构体中的函数引入。</p>
 <p>接下来，你就可以在你的js代码里面直接使用go函数了。</p>
+<h2 id="运行你的项目">运行你的项目
+</h2><p>我们使用<code>wails dev</code>来运行项目，由于项目本质上是一个去皮浏览器，所以你可以在打开的页面上使用 <strong>浏览器的开发者工具</strong> 来检查前端问题</p>
+<h2 id="构建你的项目">构建你的项目
+</h2><p>我们使用<code>wails build</code>来构建项目，构建完毕后，你会在<code>/build/bin/</code>文件夹下面看到你编译出的程序。</p>
 
 </section>
 

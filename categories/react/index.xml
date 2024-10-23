@@ -172,6 +172,10 @@ NPM (Node 15+)&lt;/p&gt;
 &lt;p&gt;使用&lt;code&gt;import { funcApp1, funcApp2 } from &amp;quot;../wailsjs/go/main/App&amp;quot;&lt;/code&gt;来引入你的js代码中，其中 &lt;strong&gt;../wailsjs/go/main/App&lt;/strong&gt; 这个路径是wails自动生成的，你不要去手动改变它。&lt;/p&gt;
 &lt;p&gt;同理，使用&lt;code&gt;import { funcBpp1,funcBpp2 } from &amp;quot;../wailsjs/go/main/Bpp&amp;quot;&lt;/code&gt;来将你的Bpp结构体中的函数引入。&lt;/p&gt;
 &lt;p&gt;接下来，你就可以在你的js代码里面直接使用go函数了。&lt;/p&gt;
+&lt;h2 id=&#34;运行你的项目&#34;&gt;运行你的项目
+&lt;/h2&gt;&lt;p&gt;我们使用&lt;code&gt;wails dev&lt;/code&gt;来运行项目，由于项目本质上是一个去皮浏览器，所以你可以在打开的页面上使用 &lt;strong&gt;浏览器的开发者工具&lt;/strong&gt; 来检查前端问题&lt;/p&gt;
+&lt;h2 id=&#34;构建你的项目&#34;&gt;构建你的项目
+&lt;/h2&gt;&lt;p&gt;我们使用&lt;code&gt;wails build&lt;/code&gt;来构建项目，构建完毕后，你会在&lt;code&gt;/build/bin/&lt;/code&gt;文件夹下面看到你编译出的程序。&lt;/p&gt;
 </description>
         </item>
         

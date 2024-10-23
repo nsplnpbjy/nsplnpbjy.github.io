@@ -8,12 +8,12 @@
         <language>zh-cn</language>
         <copyright>All</copyright>
         <lastBuildDate>Wed, 23 Oct 2024 17:06:24 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>使用golang&#43;wails来建构你的应用1</title>
-        <link>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A81/</link>
+        <title>使用golang&#43;wails来建构你的应用</title>
+        <link>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</link>
         <pubDate>Wed, 23 Oct 2024 17:06:24 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A81/</guid>
-        <description>&lt;img src="https://picsum.photos/800/600.webp?random=56e77bfd" alt="Featured image of post 使用golang&#43;wails来建构你的应用1" /&gt;&lt;h1 id=&#34;什么是wails&#34;&gt;什么是wails?
+        <guid>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+        <description>&lt;img src="https://picsum.photos/800/600.webp?random=56e77bfd" alt="Featured image of post 使用golang&#43;wails来建构你的应用" /&gt;&lt;h1 id=&#34;什么是wails&#34;&gt;什么是wails?
 &lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wails.io/zh-Hans/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;wails&lt;/a&gt;是一个go语言的框架，它可以用来构建跨平台的桌面应用。&lt;/p&gt;
 &lt;p&gt;简单来说就是&lt;strong&gt;js做界面，go做业务&lt;/strong&gt;&lt;/p&gt;

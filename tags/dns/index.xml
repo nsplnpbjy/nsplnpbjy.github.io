@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Dns on ComradeGenrr&#39;s Blog</title>
-        <link>https://nsplnpbjy.github.io/tags/dns/</link>
+        <link>http://localhost:1313/tags/dns/</link>
         <description>Recent content in Dns on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Thu, 24 Oct 2024 11:19:03 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/tags/dns/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 24 Oct 2024 11:19:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/dns/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>一个绕过dns污染的工具</title>
-        <link>https://nsplnpbjy.github.io/techpage/%E4%B8%80%E4%B8%AA%E7%BB%95%E8%BF%87dns%E6%B1%A1%E6%9F%93%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
+        <link>http://localhost:1313/techpage/%E4%B8%80%E4%B8%AA%E7%BB%95%E8%BF%87dns%E6%B1%A1%E6%9F%93%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Thu, 24 Oct 2024 11:19:03 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/techpage/%E4%B8%80%E4%B8%AA%E7%BB%95%E8%BF%87dns%E6%B1%A1%E6%9F%93%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
+        <guid>http://localhost:1313/techpage/%E4%B8%80%E4%B8%AA%E7%BB%95%E8%BF%87dns%E6%B1%A1%E6%9F%93%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
         <description>&lt;img src="https://picsum.photos/800/600.webp?random=8407e0bb" alt="Featured image of post 一个绕过dns污染的工具" /&gt;&lt;h1 id=&#34;这是一个绕过dns污染的工具&#34;&gt;这是一个绕过dns污染的工具
 &lt;/h1&gt;&lt;p&gt;我们现在有很多网站，因为不可言说的原因，虽然没被墙，但是因为DNS污染，所以时常会访问失败。&lt;/p&gt;
 &lt;p&gt;比如 &lt;strong&gt;github.com&lt;/strong&gt; 经常会失败，给我们的push和pull都造成了困难。&lt;/p&gt;

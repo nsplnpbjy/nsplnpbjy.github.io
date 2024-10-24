@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>博客 on ComradeGenrr&#39;s Blog</title>
-        <link>https://nsplnpbjy.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+        <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
         <description>Recent content in 博客 on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Wed, 23 Oct 2024 23:13:55 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 23 Oct 2024 23:13:55 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>使用hugo&#43;githubpages部署个人博客</title>
-        <link>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+        <link>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 23 Oct 2024 23:13:55 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;img src="https://picsum.photos/800/600.webp?random=83b871a5" alt="Featured image of post 使用hugo&#43;githubpages部署个人博客" /&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%afhugo&#34; &gt;什么是hugo？&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e6%80%8e%e4%b9%88%e5%ae%89%e8%a3%85hugo&#34; &gt;怎么安装hugo？&lt;/a&gt;&lt;/li&gt;
@@ -30,7 +30,7 @@
     &gt;hugo&lt;/a&gt;这种工具以及 &lt;a class=&#34;link&#34; href=&#34;https://github.com&#34;  title=&#34;github&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Github Pages&lt;/a&gt; 来进行一个免费的站点制作。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://nsplnpbjy.github.io/img/philly-magic-garden.9c0b4415.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/philly-magic-garden.9c0b4415.jpg&#34;
 	
 	
 	

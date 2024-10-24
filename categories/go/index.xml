@@ -2,17 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Go on ComradeGenrr&#39;s Blog</title>
-        <link>http://localhost:1313/categories/go/</link>
+        <link>https://nsplnpbjy.github.io/categories/go/</link>
         <description>Recent content in Go on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Wed, 23 Oct 2024 17:06:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/go/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 24 Oct 2024 11:19:03 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>一个绕过dns污染的工具</title>
+        <link>https://nsplnpbjy.github.io/techpage/%E4%B8%80%E4%B8%AA%E7%BB%95%E8%BF%87dns%E6%B1%A1%E6%9F%93%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
+        <pubDate>Thu, 24 Oct 2024 11:19:03 +0800</pubDate>
+        
+        <guid>https://nsplnpbjy.github.io/techpage/%E4%B8%80%E4%B8%AA%E7%BB%95%E8%BF%87dns%E6%B1%A1%E6%9F%93%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
+        <description>&lt;img src="https://picsum.photos/800/600.webp?random=8407e0bb" alt="Featured image of post 一个绕过dns污染的工具" /&gt;&lt;h1 id=&#34;这是一个绕过dns污染的工具&#34;&gt;这是一个绕过dns污染的工具
+&lt;/h1&gt;&lt;p&gt;我们现在有很多网站，因为不可言说的原因，虽然没被墙，但是因为DNS污染，所以时常会访问失败。&lt;/p&gt;
+&lt;p&gt;比如 &lt;strong&gt;github.com&lt;/strong&gt; 经常会失败，给我们的push和pull都造成了困难。&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载
+&lt;/h2&gt;&lt;p&gt;我开发了一个软件，针对Windows系统，我们点击这里下载 &lt;a class=&#34;link&#34; href=&#34;../attach/hostalter.exe&#34; &gt;hostalter&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;自行编译或者修改&#34;&gt;自行编译或者修改
+&lt;/h2&gt;&lt;p&gt;当然如果你不放心，可以自行编译，这里是源码 &lt;a class=&#34;link&#34; href=&#34;https://github.com/nsplnpbjy/hostsAlter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hostalter&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用
+&lt;/h2&gt;&lt;p&gt;以管理员身份运行的同时带上域名参数 比如我用&lt;strong&gt;powershell&lt;/strong&gt;打开&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hostalter.exe github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;就会把github.com的最快ip修改进你的hosts，同时删除已有的github.com记录。&lt;br&gt;
+更换域名参数可以访问其他被DNS污染的网站。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>使用golang&#43;wails来建构你的应用</title>
-        <link>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+        <link>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</link>
         <pubDate>Wed, 23 Oct 2024 17:06:24 +0800</pubDate>
         
-        <guid>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+        <guid>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
         <description>&lt;img src="https://picsum.photos/800/600.webp?random=56e77bfd" alt="Featured image of post 使用golang&#43;wails来建构你的应用" /&gt;&lt;h1 id=&#34;什么是wails&#34;&gt;什么是wails?
 &lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wails.io/zh-Hans/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;wails&lt;/a&gt;是一个go语言的框架，它可以用来构建跨平台的桌面应用。&lt;/p&gt;

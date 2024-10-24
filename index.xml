@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>ComradeGenrr&#39;s Blog</title>
-        <link>https://nsplnpbjy.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Wed, 23 Oct 2024 23:16:26 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 23 Oct 2024 23:16:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>短篇小说 蒲癸胓的呼唤</title>
-        <link>https://nsplnpbjy.github.io/noval/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4-%E8%92%B2%E7%99%B8%E8%83%93%E7%9A%84%E5%91%BC%E5%94%A4/</link>
+        <link>http://localhost:1313/noval/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4-%E8%92%B2%E7%99%B8%E8%83%93%E7%9A%84%E5%91%BC%E5%94%A4/</link>
         <pubDate>Wed, 23 Oct 2024 23:16:26 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/noval/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4-%E8%92%B2%E7%99%B8%E8%83%93%E7%9A%84%E5%91%BC%E5%94%A4/</guid>
-        <description>&lt;img src="https://nsplnpbjy.github.io/img/fornoval.jpg" alt="Featured image of post 短篇小说 蒲癸胓的呼唤" /&gt;&lt;ul&gt;
+        <guid>http://localhost:1313/noval/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4-%E8%92%B2%E7%99%B8%E8%83%93%E7%9A%84%E5%91%BC%E5%94%A4/</guid>
+        <description>&lt;img src="http://localhost:1313/img/fornoval.jpg" alt="Featured image of post 短篇小说 蒲癸胓的呼唤" /&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%b8%80%e7%ab%a0%e7%85%a7%e7%89%87&#34; &gt;第一章：照片&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0%e9%81%97%e7%89%a9&#34; &gt;第二章：遗物&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0%e5%bd%92%e9%80%94%e4%b8%8e%e5%90%af%e7%a4%ba&#34; &gt;第三章：归途与启示&lt;/a&gt;&lt;/li&gt;
@@ -289,10 +289,10 @@
         </item>
         <item>
         <title>使用hugo&#43;githubpages部署个人博客</title>
-        <link>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+        <link>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 23 Oct 2024 23:13:55 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8hugo&#43;githubpages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;img src="https://picsum.photos/800/600.webp?random=83b871a5" alt="Featured image of post 使用hugo&#43;githubpages部署个人博客" /&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%afhugo&#34; &gt;什么是hugo？&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e6%80%8e%e4%b9%88%e5%ae%89%e8%a3%85hugo&#34; &gt;怎么安装hugo？&lt;/a&gt;&lt;/li&gt;
@@ -310,7 +310,7 @@
     &gt;hugo&lt;/a&gt;这种工具以及 &lt;a class=&#34;link&#34; href=&#34;https://github.com&#34;  title=&#34;github&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Github Pages&lt;/a&gt; 来进行一个免费的站点制作。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://nsplnpbjy.github.io/img/philly-magic-garden.9c0b4415.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/philly-magic-garden.9c0b4415.jpg&#34;
 	
 	
 	
@@ -449,10 +449,10 @@
         </item>
         <item>
         <title>使用golang&#43;wails来建构你的应用</title>
-        <link>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+        <link>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</link>
         <pubDate>Wed, 23 Oct 2024 17:06:24 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+        <guid>http://localhost:1313/techpage/%E4%BD%BF%E7%94%A8golang&#43;wails%E6%9D%A5%E5%BB%BA%E6%9E%84%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
         <description>&lt;img src="https://picsum.photos/800/600.webp?random=56e77bfd" alt="Featured image of post 使用golang&#43;wails来建构你的应用" /&gt;&lt;h1 id=&#34;什么是wails&#34;&gt;什么是wails?
 &lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wails.io/zh-Hans/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;wails&lt;/a&gt;是一个go语言的框架，它可以用来构建跨平台的桌面应用。&lt;/p&gt;
@@ -620,12 +620,12 @@ NPM (Node 15+)&lt;/p&gt;
         </item>
         <item>
         <title>光荣之家</title>
-        <link>https://nsplnpbjy.github.io/thinking/%E5%85%89%E8%8D%A3%E4%B9%8B%E5%AE%B6/</link>
+        <link>http://localhost:1313/thinking/%E5%85%89%E8%8D%A3%E4%B9%8B%E5%AE%B6/</link>
         <pubDate>Sun, 20 Oct 2024 15:16:22 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/thinking/%E5%85%89%E8%8D%A3%E4%B9%8B%E5%AE%B6/</guid>
+        <guid>http://localhost:1313/thinking/%E5%85%89%E8%8D%A3%E4%B9%8B%E5%AE%B6/</guid>
         <description>&lt;p&gt;&lt;strong&gt;光荣之家&lt;/strong&gt; 的牌子相信很多人见过&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://nsplnpbjy.github.io/img/87800c73d3cb4bcba742ae3c4ecd3982.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/87800c73d3cb4bcba742ae3c4ecd3982.jpeg&#34;
 	
 	
 	
@@ -644,10 +644,10 @@ NPM (Node 15+)&lt;/p&gt;
         </item>
         <item>
         <title>农业合作化的一场辩论和当前的阶级斗争</title>
-        <link>https://nsplnpbjy.github.io/thinking/%E5%86%9C%E4%B8%9A%E5%90%88%E4%BD%9C%E5%8C%96%E7%9A%84%E4%B8%80%E5%9C%BA%E8%BE%A9%E8%AE%BA%E5%92%8C%E5%BD%93%E5%89%8D%E7%9A%84%E9%98%B6%E7%BA%A7%E6%96%97%E4%BA%89/</link>
+        <link>http://localhost:1313/thinking/%E5%86%9C%E4%B8%9A%E5%90%88%E4%BD%9C%E5%8C%96%E7%9A%84%E4%B8%80%E5%9C%BA%E8%BE%A9%E8%AE%BA%E5%92%8C%E5%BD%93%E5%89%8D%E7%9A%84%E9%98%B6%E7%BA%A7%E6%96%97%E4%BA%89/</link>
         <pubDate>Sun, 20 Oct 2024 00:51:22 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/thinking/%E5%86%9C%E4%B8%9A%E5%90%88%E4%BD%9C%E5%8C%96%E7%9A%84%E4%B8%80%E5%9C%BA%E8%BE%A9%E8%AE%BA%E5%92%8C%E5%BD%93%E5%89%8D%E7%9A%84%E9%98%B6%E7%BA%A7%E6%96%97%E4%BA%89/</guid>
+        <guid>http://localhost:1313/thinking/%E5%86%9C%E4%B8%9A%E5%90%88%E4%BD%9C%E5%8C%96%E7%9A%84%E4%B8%80%E5%9C%BA%E8%BE%A9%E8%AE%BA%E5%92%8C%E5%BD%93%E5%89%8D%E7%9A%84%E9%98%B6%E7%BA%A7%E6%96%97%E4%BA%89/</guid>
         <description>&lt;p&gt;（一九五五年十月十一日）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;这是毛泽东同志在中国共产党第七届中央委员会扩大的第六次全体会议上的结论。&lt;/li&gt;
@@ -729,10 +729,10 @@ NPM (Node 15+)&lt;/p&gt;
         </item>
         <item>
         <title>工人阶级与资产阶级的矛盾是国内的主要矛盾</title>
-        <link>https://nsplnpbjy.github.io/thinking/%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E4%B8%8E%E8%B5%84%E4%BA%A7%E9%98%B6%E7%BA%A7%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%98%AF%E5%9B%BD%E5%86%85%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9F%9B%E7%9B%BE/</link>
+        <link>http://localhost:1313/thinking/%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E4%B8%8E%E8%B5%84%E4%BA%A7%E9%98%B6%E7%BA%A7%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%98%AF%E5%9B%BD%E5%86%85%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9F%9B%E7%9B%BE/</link>
         <pubDate>Sun, 20 Oct 2024 00:48:28 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/thinking/%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E4%B8%8E%E8%B5%84%E4%BA%A7%E9%98%B6%E7%BA%A7%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%98%AF%E5%9B%BD%E5%86%85%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9F%9B%E7%9B%BE/</guid>
+        <guid>http://localhost:1313/thinking/%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E4%B8%8E%E8%B5%84%E4%BA%A7%E9%98%B6%E7%BA%A7%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%98%AF%E5%9B%BD%E5%86%85%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9F%9B%E7%9B%BE/</guid>
         <description>&lt;p&gt;（一九五二年六月六日）&lt;/p&gt;
 &lt;p&gt;　　* 这是毛泽东在中共中央统一战线工作部起草的一个文件上的批语。毛泽东同志批判了这个部的负责人把民族资产阶级看作是中间阶级的错误观点。&lt;/p&gt;
 &lt;p&gt;　　在打倒地主阶级和官僚资产阶级以后，中国内部的&lt;strong&gt;主要矛盾即是工人阶级与民族资产阶级的矛盾，故不应再将民族资产阶级称为中间阶级&lt;/strong&gt;。&lt;/p&gt;
@@ -741,10 +741,10 @@ NPM (Node 15+)&lt;/p&gt;
         </item>
         <item>
         <title>Search</title>
-        <link>https://nsplnpbjy.github.io/search/</link>
+        <link>http://localhost:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/search/</guid>
+        <guid>http://localhost:1313/search/</guid>
         <description></description>
         </item>
         

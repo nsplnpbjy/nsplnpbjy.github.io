@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on ComradeGenrr&#39;s Blog</title>
-        <link>https://nsplnpbjy.github.io/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Recent content in Categories on ComradeGenrr&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Wed, 23 Oct 2024 23:16:26 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 23 Oct 2024 23:16:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>小说</title>
-        <link>https://nsplnpbjy.github.io/categories/%E5%B0%8F%E8%AF%B4/</link>
+        <link>http://localhost:1313/categories/%E5%B0%8F%E8%AF%B4/</link>
         <pubDate>Wed, 23 Oct 2024 23:16:26 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/categories/%E5%B0%8F%E8%AF%B4/</guid>
+        <guid>http://localhost:1313/categories/%E5%B0%8F%E8%AF%B4/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>https://nsplnpbjy.github.io/categories/hugo/</link>
+        <link>http://localhost:1313/categories/hugo/</link>
         <pubDate>Wed, 23 Oct 2024 23:13:55 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/categories/hugo/</guid>
+        <guid>http://localhost:1313/categories/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Go</title>
-        <link>https://nsplnpbjy.github.io/categories/go/</link>
+        <link>http://localhost:1313/categories/go/</link>
         <pubDate>Wed, 23 Oct 2024 17:06:24 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/categories/go/</guid>
+        <guid>http://localhost:1313/categories/go/</guid>
         <description></description>
         </item>
         <item>
         <title>React</title>
-        <link>https://nsplnpbjy.github.io/categories/react/</link>
+        <link>http://localhost:1313/categories/react/</link>
         <pubDate>Wed, 23 Oct 2024 17:06:24 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/categories/react/</guid>
+        <guid>http://localhost:1313/categories/react/</guid>
         <description></description>
         </item>
         <item>
         <title>Wails</title>
-        <link>https://nsplnpbjy.github.io/categories/wails/</link>
+        <link>http://localhost:1313/categories/wails/</link>
         <pubDate>Wed, 23 Oct 2024 17:06:24 +0800</pubDate>
         
-        <guid>https://nsplnpbjy.github.io/categories/wails/</guid>
+        <guid>http://localhost:1313/categories/wails/</guid>
         <description></description>
         </item>
         

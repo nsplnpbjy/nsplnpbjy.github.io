@@ -292,6 +292,7 @@
     <li><a href="#animator里面的layer和mask">Animator里面的layer和mask</a></li>
     <li><a href="#用好blend-tree">用好blend tree</a></li>
     <li><a href="#注意has-exit-time参数">注意Has Exit Time参数</a></li>
+    <li><a href="#注意rigidbody和rm动画同时使用的情况">注意Rigidbody和RM动画同时使用的情况</a></li>
   </ol>
 </nav>
         </div>
@@ -364,7 +365,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -401,6 +402,32 @@
 </h2><p><strong>blend tree</strong> 可以在<strong>animator</strong>中右键创建，它可以非常方便地控制各向移动的状态切换</p>
 <h2 id="注意has-exit-time参数">注意Has Exit Time参数
 </h2><p>各个动画状态间转化的箭头，要注意其中的Has Exit Time，勾选这个参数，动画一定会播放完毕再进入下一个状态，根据游戏需要自行调整。</p>
+<h2 id="注意rigidbody和rm动画同时使用的情况">注意Rigidbody和RM动画同时使用的情况
+</h2><p>如果Rigidbody和RM动画同时使用，那么RM动画自带的位移会被刚体的物理计算影响。<br>
+如果想要正确的移动，需要对刚体的移动做出修正：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">OnAnimatorMove</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">animator</span><span class="p">.</span><span class="n">applyRootMotion</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rb</span><span class="p">.</span><span class="n">MovePosition</span><span class="p">(</span><span class="n">rb</span><span class="p">.</span><span class="n">position</span> <span class="p">+</span> <span class="n">animator</span><span class="p">.</span><span class="n">deltaPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rb</span><span class="p">.</span><span class="n">MoveRotation</span><span class="p">(</span><span class="n">animator</span><span class="p">.</span><span class="n">deltaRotation</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个<strong>OnAnimatorMove</strong>会在RM动画带来位移的时候调用，这个时候利用本物体的动画控制器<strong>animator</strong>和本物体的刚体<strong>rb</strong>来联合调整刚体的位置。</p>
 
 </section>
 

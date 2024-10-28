@@ -77,12 +77,15 @@
 &lt;h2 id=&#34;mesh-collider的条件&#34;&gt;Mesh Collider的条件
 &lt;/h2&gt;&lt;p&gt;Mesh Collider的网格细分比较多，效果好，但是较为耗费性能。&lt;/p&gt;
 &lt;p&gt;另外，根据Unity的官方手册，&lt;strong&gt;Mesh Collider&lt;/strong&gt;与 &lt;strong&gt;Rigidbody&lt;/strong&gt; 一起使用时，必须勾上&lt;strong&gt;Convex&lt;/strong&gt; ，否则不能正常工作。此选项会粗略地给出碰撞体，降低性能开销，但是没那么精细了。&lt;/p&gt;
-&lt;h2 id=&#34;我们一般让主角拥有rigidbody&#34;&gt;我们一般让主角拥有Rigidbody
-&lt;/h2&gt;&lt;p&gt;让其他可碰撞的物体拥有其他碰撞体。&lt;/p&gt;
+&lt;h2 id=&#34;rigidbody的安排&#34;&gt;Rigidbody的安排
+&lt;/h2&gt;&lt;p&gt;我们&lt;strong&gt;一般不在主角身上使用Rigidbody&lt;/strong&gt;，因为这里面有很多物理引擎引出的问题，解决起来不容易。&lt;br&gt;
+但如果你的玩法很新，需要一个Rigidbody安排在主角身上，那就尝试使用它。&lt;br&gt;
+让其他可碰撞的物体拥有其他碰撞体。&lt;/p&gt;
 &lt;h2 id=&#34;rigidbody里面的collision-detection是碰撞体检测&#34;&gt;Rigidbody里面的Collision Detection是碰撞体检测
 &lt;/h2&gt;&lt;p&gt;有多个选项，分别适应低速、高速等物体碰撞&lt;/p&gt;
 &lt;h2 id=&#34;碰撞后的效果&#34;&gt;碰撞后的效果
-&lt;/h2&gt;&lt;p&gt;比如我们有子弹，我们要在刚体 &lt;strong&gt;Rigidbody&lt;/strong&gt; 勾选上 &lt;strong&gt;Is Kinematic&lt;/strong&gt; 选项，此选项会让你的对象不会被其他物理效果影响，但自身能影响其他对象的物理效果，子弹特别适用。&lt;strong&gt;手雷不行，受累涉及到弹墙壁&lt;/strong&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;oncollisionenter&#34;&gt;OnCollisionEnter
+&lt;/h3&gt;&lt;p&gt;比如我们有子弹，我们要在刚体 &lt;strong&gt;Rigidbody&lt;/strong&gt; 勾选上 &lt;strong&gt;Is Kinematic&lt;/strong&gt; 选项，此选项会让你的对象不会被其他物理效果影响，但自身能影响其他对象的物理效果，子弹特别适用。&lt;strong&gt;手雷不行，手雷涉及到弹墙壁&lt;/strong&gt;&lt;br&gt;
 我们给子弹加一个脚本，脚本里面我们去覆写一个方法 &lt;strong&gt;void OnCollisionEnter(Collision collision)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;覆写这个方法可以利用collision去获得被撞到的对象比如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -162,7 +165,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h3 id=&#34;ontriggerenter&#34;&gt;OnTriggerEnter
+&lt;/h3&gt;&lt;p&gt;还是比如我们有子弹，击中了某个被设置了&lt;strong&gt;trigger&lt;/strong&gt;的collider，被击物体就会调用OnTriggerEnter、OnTriggerStay之类的事件，通常用来区分被击部位。&lt;br&gt;
+比如头部和胸部各有collider，collider都被设置为&lt;strong&gt;trigger&lt;/strong&gt;，那么子弹击中头部就会触发头部的OnTriggerEnter，你在头部写的脚本就可以让角色死亡，同理，胸部的就设置掉多少血。&lt;/p&gt;
+</description>
         </item>
         
     </channel>

@@ -7,7 +7,41 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>All</copyright>
-        <lastBuildDate>Tue, 29 Oct 2024 10:20:06 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 30 Oct 2024 14:35:10 +0800</lastBuildDate><atom:link href="https://nsplnpbjy.github.io/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Unity6游戏开发学习之人物攻击以及受击</title>
+        <link>https://nsplnpbjy.github.io/techpage/unity6%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BA%BA%E7%89%A9%E6%94%BB%E5%87%BB%E4%BB%A5%E5%8F%8A%E5%8F%97%E5%87%BB/</link>
+        <pubDate>Wed, 30 Oct 2024 14:35:10 +0800</pubDate>
+        
+        <guid>https://nsplnpbjy.github.io/techpage/unity6%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BA%BA%E7%89%A9%E6%94%BB%E5%87%BB%E4%BB%A5%E5%8F%8A%E5%8F%97%E5%87%BB/</guid>
+        <description>&lt;img src="https://picsum.photos/800/600.webp?random=6fc93a2b" alt="Featured image of post Unity6游戏开发学习之人物攻击以及受击" /&gt;&lt;h1 id=&#34;unity6游戏开发学习之人物攻击以及受击&#34;&gt;Unity6游戏开发学习之人物攻击以及受击
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;这是一个计划，后续随着开发实践将做出修正改动&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;人物模型和动画&#34;&gt;人物模型和动画
+&lt;/h2&gt;&lt;p&gt;人物模型和动画是从&lt;a class=&#34;link&#34; href=&#34;https://assetstore.unity.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unity Asset store&lt;/a&gt;下载的。&lt;br&gt;
+人物模型的骨架&lt;strong&gt;RIG&lt;/strong&gt;是&lt;strong&gt;humanoid&lt;/strong&gt;标准的，动画也是，可以适配套用。&lt;/p&gt;
+&lt;h2 id=&#34;人物移动&#34;&gt;人物移动
+&lt;/h2&gt;&lt;p&gt;我下载的人物移动的动画有八个移动方向，有走、跑、冲刺等行为。&lt;/p&gt;
+&lt;p&gt;人物的移动动画使用&lt;strong&gt;blend tree&lt;/strong&gt;控制，并且不使用&lt;strong&gt;root motion&lt;/strong&gt;，而是使用刚体&lt;strong&gt;Rigidbody&lt;/strong&gt;来控制人物旋转和移动。&lt;/p&gt;
+&lt;p&gt;通过脚本接收输入，然后改变刚体的速度来控制移动方向，要注意把速度向量从&lt;strong&gt;世界坐标&lt;/strong&gt;的向量改为&lt;strong&gt;角色坐标&lt;/strong&gt;的向量。&lt;/p&gt;
+&lt;p&gt;旋转要注意用一个值把鼠标输入的角度存起来，并且在每帧加减新输入的值，使用刚体的&lt;strong&gt;MoveRotation&lt;/strong&gt;方法来旋转刚体。&lt;/p&gt;
+&lt;p&gt;跳跃就是给角色一个Y轴上的冲击力&lt;strong&gt;impulse force&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;地面检测使用球形检测&lt;strong&gt;Physics.SphereCast&lt;/strong&gt;来判断人物有没有着地。&lt;/p&gt;
+&lt;p&gt;一切涉及刚体的物理状态更新，比如改变刚体速度，旋转刚体，给刚体施加力，都应该在**FixUpdate()&lt;strong&gt;里面进行，这是物理步长。而不是在帧步长&lt;/strong&gt;Update()**里面更新，否则会出现意想不到的问题。&lt;/p&gt;
+&lt;h2 id=&#34;人物攻击和受击&#34;&gt;人物攻击和受击
+&lt;/h2&gt;&lt;h3 id=&#34;给人物设置受击体&#34;&gt;给人物设置受击体
+&lt;/h3&gt;&lt;p&gt;比如我们给人物的胸部增加一个空对象碰撞体 &lt;strong&gt;Box Collider&lt;/strong&gt;,并给空对象的模型一个&lt;strong&gt;Tag&lt;/strong&gt;，就叫&lt;strong&gt;chest&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;写一个通用受击脚本，这个脚本通过检测本体的&lt;strong&gt;Transform&lt;/strong&gt; 来确定自身 &lt;strong&gt;tag&lt;/strong&gt;，根据不同的&lt;strong&gt;tag&lt;/strong&gt;来确定自身是&lt;strong&gt;chest&lt;/strong&gt; &lt;strong&gt;head&lt;/strong&gt; &lt;strong&gt;belly&lt;/strong&gt;哪个部位，把它放在&lt;strong&gt;startup&lt;/strong&gt;里面来检测。&lt;/p&gt;
+&lt;p&gt;我们把所有可受击的东西，比如&lt;strong&gt;chest&lt;/strong&gt;这个空对象的layer设置为&lt;strong&gt;hurtful&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;脚本提供一个受击方法比如&lt;strong&gt;GetHit&lt;/strong&gt;，这个方法将在被对方&lt;strong&gt;攻击检测&lt;/strong&gt;到之后调用，根据攻击的部位和受击的部位来决定伤害值，然后在里面再调用角色的生命值加减方法和角色的受击动画方法，具体的实现方法各种各样。&lt;/p&gt;
+&lt;h3 id=&#34;给人物设置攻击检测&#34;&gt;给人物设置攻击检测
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;我们在动画中进行攻击检测&lt;/strong&gt;，比如出拳的动画，在手臂完全伸直的那一帧，增加一个事件&lt;strong&gt;Event&lt;/strong&gt;，设置好要触发的方法名，比如&lt;strong&gt;LeftStraightPunch&lt;/strong&gt;，之后在其他的脚本里去实现&lt;strong&gt;LeftStraightPunch&lt;/strong&gt;，要注意必须是&lt;strong&gt;public void&lt;/strong&gt;的，这个方法会在动画的这一帧触发。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LeftStraightPunch&lt;/strong&gt;方法的脚本放去左手中指的模型上，放在这里检测效果好一点，当然也可以不放在中指上。&lt;/p&gt;
+&lt;p&gt;现在我们要用&lt;strong&gt;Physics.SphereCast&lt;/strong&gt;来检测碰撞，检测的layer就是&lt;strong&gt;hurtful&lt;/strong&gt;。撞到就调用被撞对象的&lt;strong&gt;GetHit&lt;/strong&gt;方法。&lt;/p&gt;
+&lt;h2 id=&#34;流程&#34;&gt;流程
+&lt;/h2&gt;&lt;p&gt;A角色开始攻击动画 =》 攻击动画进行到Event帧 =》 触发LeftStraightPunch方法 =》 Physics.SphereCast攻击检测 =》 检测到的Collider依次调用GetHit =》 GetHit依据传入的参数和自身的参数计算伤害值 = 》 GetHit调用角色生命值加减方法（比如叫HP Control，挂在角色身上）=》 GetHit调用角色受击动画方法&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Unity6游戏开发学习之IK反向动力学</title>
         <link>https://nsplnpbjy.github.io/techpage/unity6%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E4%B9%8Bik%E5%8F%8D%E5%90%91%E5%8A%A8%E5%8A%9B%E5%AD%A6/</link>
         <pubDate>Tue, 29 Oct 2024 10:20:06 +0800</pubDate>

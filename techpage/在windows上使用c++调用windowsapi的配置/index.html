@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在windows上使用c++调用WindowsApi的配置\r编译器的选择\r编译器一定要选择MSVC,这是微软自己搞的编译器，使用其他编译器可能会有意料之外的问题。\n在这里有它的下载渠道visual studio,选择好你需要的工作集，它会自行给你下载安装好。\n">
+<title>在windows上使用c&#43;&#43;调用WindowsApi的配置</title>
+
+<link rel='canonical' href='https://nsplnpbjy.github.io/techpage/%E5%9C%A8windows%E4%B8%8A%E4%BD%BF%E7%94%A8c&#43;&#43;%E8%B0%83%E7%94%A8windowsapi%E7%9A%84%E9%85%8D%E7%BD%AE/'>
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="在windows上使用c++调用WindowsApi的配置">
+<meta property='og:description' content="在windows上使用c++调用WindowsApi的配置\r编译器的选择\r编译器一定要选择MSVC,这是微软自己搞的编译器，使用其他编译器可能会有意料之外的问题。\n在这里有它的下载渠道visual studio,选择好你需要的工作集，它会自行给你下载安装好。\n">
+<meta property='og:url' content='https://nsplnpbjy.github.io/techpage/%E5%9C%A8windows%E4%B8%8A%E4%BD%BF%E7%94%A8c&#43;&#43;%E8%B0%83%E7%94%A8windowsapi%E7%9A%84%E9%85%8D%E7%BD%AE/'>
+<meta property='og:site_name' content='ComradeGenrr&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Techpage' /><meta property='article:tag' content='WindowsApi' /><meta property='article:published_time' content='2024-11-09T14:59:12&#43;08:00'/><meta property='article:modified_time' content='2024-11-09T14:59:12&#43;08:00'/><meta property='og:image' content='https://picsum.photos/800/600.webp?random=89accf10' />
+<meta name="twitter:title" content="在windows上使用c++调用WindowsApi的配置">
+<meta name="twitter:description" content="在windows上使用c++调用WindowsApi的配置\r编译器的选择\r编译器一定要选择MSVC,这是微软自己搞的编译器，使用其他编译器可能会有意料之外的问题。\n在这里有它的下载渠道visual studio,选择好你需要的工作集，它会自行给你下载安装好。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://picsum.photos/800/600.webp?random=89accf10' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu4984781989487032490.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">ComradeGenrr&#39;s Blog</a></h1>
+            <h2 class="site-description">Tech、Thinking</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='mailto:nsplnp@126.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/nsplnpbjy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://x.com/nsplnpbjy'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/techpage/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>TechPage</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/thinking/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                
+                <span>Thinking</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/noval/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                
+                <span>Noval</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#编译器的选择">编译器的选择</a></li>
+    <li><a href="#环境变量的配置">环境变量的配置</a></li>
+    <li><a href="#使用cl">使用cl</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/techpage/%E5%9C%A8windows%E4%B8%8A%E4%BD%BF%E7%94%A8c&#43;&#43;%E8%B0%83%E7%94%A8windowsapi%E7%9A%84%E9%85%8D%E7%BD%AE/">
+                
+                    <img src="https://picsum.photos/800/600.webp?random=89accf10" loading="lazy" alt="Featured image of post 在windows上使用c&#43;&#43;调用WindowsApi的配置" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/c&#43;&#43;/" >
+                C&#43;&#43;
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/techpage/%E5%9C%A8windows%E4%B8%8A%E4%BD%BF%E7%94%A8c&#43;&#43;%E8%B0%83%E7%94%A8windowsapi%E7%9A%84%E9%85%8D%E7%BD%AE/">在windows上使用c&#43;&#43;调用WindowsApi的配置</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 09, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="在windows上使用c调用windowsapi的配置">在windows上使用c++调用WindowsApi的配置
+</h1><h2 id="编译器的选择">编译器的选择
+</h2><p>编译器一定要选择MSVC,这是微软自己搞的编译器，使用其他编译器可能会有意料之外的问题。<br>
+在这里有它的下载渠道<a class="link" href="https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/"  target="_blank" rel="noopener"
+    >visual studio</a>,选择好你需要的工作集，它会自行给你下载安装好。</p>
+<h2 id="环境变量的配置">环境变量的配置
+</h2><p>如果你不想用<strong>visual studio</strong>，这个东西功能太多太重了，我使用<strong>VS Code</strong>，那么你就要配置一些环境变量，否则你只能使用<strong>Developer Command Prompt</strong>这种东西，在<strong>VS Code</strong>的终端中不太好用。<br>
+我们打开<strong>Developer Command Prompt</strong>，输入命令<strong>set</strong>，找到其中的<strong>INCLUDE</strong> <strong>LIB</strong> <strong>LIBPATH</strong>比如我的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">INCLUDE</span><span class="o">=</span>D:<span class="se">\m</span>svc<span class="se">\V</span>C<span class="se">\T</span>ools<span class="se">\M</span>SVC<span class="se">\1</span>4.41.34120<span class="se">\i</span>nclude<span class="p">;</span>D:<span class="se">\m</span>svc<span class="se">\V</span>C<span class="se">\A</span>uxiliary<span class="se">\V</span>S<span class="se">\i</span>nclude<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\i</span>nclude<span class="se">\1</span>0.0.26100.0<span class="se">\u</span>crt<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\\</span>include<span class="se">\1</span>0.0.26100.0<span class="se">\\</span>um<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\\</span>include<span class="se">\1</span>0.0.26100.0<span class="se">\\</span>shared<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\\</span>include<span class="se">\1</span>0.0.26100.0<span class="se">\\</span>winrt<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\\</span>include<span class="se">\1</span>0.0.26100.0<span class="se">\\</span>cppwinrt
+</span></span><span class="line"><span class="cl"><span class="nv">JAVA_HOME</span><span class="o">=</span>C:<span class="se">\P</span>rogram Files<span class="se">\R</span>edHat<span class="se">\j</span>ava-17-openjdk-17.0.6.0.10-1<span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span><span class="nv">LIB</span><span class="o">=</span>D:<span class="se">\m</span>svc<span class="se">\V</span>C<span class="se">\T</span>ools<span class="se">\M</span>SVC<span class="se">\1</span>4.41.34120<span class="se">\l</span>ib<span class="se">\x</span>86<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\l</span>ib<span class="se">\1</span>0.0.26100.0<span class="se">\u</span>crt<span class="se">\x</span>86<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\\</span>lib<span class="se">\1</span>0.0.26100.0<span class="se">\\</span>um<span class="se">\x</span><span class="m">86</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LIBPATH</span><span class="o">=</span>D:<span class="se">\m</span>svc<span class="se">\V</span>C<span class="se">\T</span>ools<span class="se">\M</span>SVC<span class="se">\1</span>4.41.34120<span class="se">\l</span>ib<span class="se">\x</span>86<span class="p">;</span>D:<span class="se">\m</span>svc<span class="se">\V</span>C<span class="se">\T</span>ools<span class="se">\M</span>SVC<span class="se">\1</span>4.41.34120<span class="se">\l</span>ib<span class="se">\x</span>86<span class="se">\s</span>tore<span class="se">\r</span>eferences<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\U</span>nionMetadata<span class="se">\1</span>0.0.26100.0<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\W</span>indows Kits<span class="se">\1</span>0<span class="se">\R</span>eferences<span class="se">\1</span>0.0.26100.0<span class="p">;</span>C:<span class="se">\W</span>indows<span class="se">\M</span>icrosoft.NET<span class="se">\F</span>ramework<span class="se">\v</span>4.0.30319
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>把他们添加进系统环境变量里，也分别设置为<strong>INCLUDE</strong> <strong>LIB</strong> <strong>LIBPATH</strong>，其中根据你的操作系统去更改一下X86-》X64。</p>
+<h2 id="使用cl">使用cl
+</h2><p>MSVC的编译器操作命令是cl，比如<code>cl main.cpp</code>这样，你要把你的cl命令加入系统环境变量Path中去，比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">D:<span class="se">\m</span>svc<span class="se">\V</span>C<span class="se">\T</span>ools<span class="se">\M</span>SVC<span class="se">\1</span>4.41.34120<span class="se">\b</span>in<span class="se">\H</span>ostx64<span class="se">\x</span><span class="m">64</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/windowsapi/">WindowsApi</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-Cn","locale":{"admin":"Admin","placeholder":"none"},"requiredMeta":["name","email","url"],"serverURL":"https://waline-one-green.vercel.app/"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 All
+    </section>
+    
+    <section class="powerby">
+        
+            Thanks to visit! <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.28.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
